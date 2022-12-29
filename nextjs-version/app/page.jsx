@@ -1,18 +1,13 @@
 import { Suspense } from "react";
 import Comments from "./Comments";
 
-const fetchDescription = () =>
-  new Promise((resolve) =>
-    setTimeout(() => resolve("Product information ready for SEO"), 100)
-  );
+const fetchDescription = () => new Promise((resolve) => setTimeout(() => resolve("Product information ready for SEO"), 100));
 
 export default async function Home() {
-  const description = (await fetchDescription()) as string;
+  const description = (await fetchDescription());
 
   return (
     <>
-      <header>Header</header>
-
       <h2>Product Description</h2>
       <p>{description}</p>
 
@@ -21,8 +16,6 @@ export default async function Home() {
         {/* @ts-expect-error Async Server Component */}
         <Comments />
       </Suspense>
-
-      <footer>Footer</footer>
     </>
   );
 }

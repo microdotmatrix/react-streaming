@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "components/animation.css";
+
+body {
+  font-family: var(--font-space-grotesk);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+header, footer {
+  background-color: darkblue;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+  margin: 1rem 0;
+}

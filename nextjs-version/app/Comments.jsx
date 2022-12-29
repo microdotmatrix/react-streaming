@@ -6,7 +6,7 @@ const commentsFetch = () =>
   );
 
 async function Comments() {
-  const comments = (await commentsFetch()) as string[];
+  const comments = (await commentsFetch())
 
   return <EditableComments comments={comments} />;
 }
